@@ -144,8 +144,104 @@ ul {
     height: 23px;
   }
 }
+.navigation__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 65vw;
+  height: 100vh;
+  background-color: var(--primary-bg);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--primary-color-dark);
+  transform: translateX(-200%);
+  transition: transform 450ms ease-in-out;
+  z-index: 4;
+}
+@media screen and (min-width: 1440px) {
+  .navigation__wrapper {
+    width: 35vw;
+  }
+}
+.navigation__close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+}
+.navigation__close-icon {
+  border: 0;
+  width: 40px;
+  height: 40px;
+}
 .navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.navigation__item {
+  position: relative;
+}
+.navigation__link {
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: var(--text-color-dark);
+}
+@media screen and (min-width: 1440px) {
+  .navigation__link {
+    margin-left: 80px;
+    font-weight: 400;
+    font-size: 62px;
+    line-height: 1.3064516129;
+    letter-spacing: -0.02em;
+  }
+}
+.navigation__sublist {
   display: none;
+  position: absolute;
+  top: 90%;
+  right: 50px;
+  border-top: 1px solid var(--primary-color-dark);
+  cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
+  .navigation__sublist {
+    padding-left: 100px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navigation__item:hover .navigation__sublist {
+    display: block;
+    z-index: 5;
+  }
+}
+.navigation__subitem {
+  border-bottom: 1px solid var(--primary-color-dark);
+}
+.navigation__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5333333333;
+  letter-spacing: normal;
+}
+@media screen and (min-width: 1440px) {
+  .navigation__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5555555556;
+    letter-spacing: -0.02em;
+  }
+}
+
+.is-open {
+  transform: translateX(0);
 }
 
 .logo-link {
