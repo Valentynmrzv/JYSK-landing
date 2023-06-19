@@ -617,6 +617,7 @@ ul {
 
 .card {
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 .card__wrapper {
   display: flex;
@@ -633,19 +634,31 @@ ul {
 @media screen and (min-width: 1440px) {
   .card__title {
     font-weight: 400;
-    font-size: 32px;
-    line-height: 1.25;
-    letter-spacing: 0.04em;
+    font-size: 62px;
+    line-height: 1.3064516129;
+    letter-spacing: -0.02em;
+    text-align: start;
   }
 }
 .card__inner {
   margin-top: 30px;
+}
+@media screen and (min-width: 1440px) {
+  .card__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .card-picture {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .card-picture {
+    max-width: 416px;
+  }
 }
 .card-picture .icon {
   margin-bottom: 12px;
@@ -660,6 +673,7 @@ ul {
 .frame {
   margin-top: 15px;
   display: flex;
+  justify-content: center;
   gap: 21px;
 }
 .frame__item {
@@ -682,6 +696,11 @@ ul {
   font-size: 15px;
   line-height: 1.3333333333;
   letter-spacing: normal;
+  width: 150px;
+  text-align: start;
+}
+.card-text:nth-child(2) {
+  text-align: end;
 }
 @media screen and (min-width: 1440px) {
   .card-text {
@@ -689,6 +708,7 @@ ul {
     font-size: 18px;
     line-height: 1.3888888889;
     letter-spacing: -0.02em;
+    width: 192px;
   }
 }
 
@@ -697,11 +717,60 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .card-description {
+    align-items: flex-start;
+  }
+}
+.card-description__title {
+  text-align: center;
+}
+@media screen and (min-width: 1440px) {
+  .card-description__title {
+    text-align: start;
+  }
+}
+.card-description__list {
+  display: flex;
+  flex-direction: column;
 }
 .card-description__item {
+  padding-top: 5px;
+  padding-bottom: 5px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--primary-color-dark);
+}
+.card-description__item:last-child {
+  border-bottom: 0;
+}
+@media screen and (min-width: 1440px) {
+  .card-description__item {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    width: 504px;
+  }
+}
+.card-description__button {
+  display: block;
+  width: 100%;
+  height: 44px;
+  text-align: center;
+  border-radius: 170px;
+  border: 0;
+  background-color: var(--primary-bg);
+  transition: var(--transition-property);
+}
+.card-description__button:hover, .card-description__button:focus {
+  background-color: #DFDFDF;
+}
+@media screen and (min-width: 1440px) {
+  .card-description__button {
+    width: 202px;
+    height: 63px;
+  }
 }
 
 .footer__wrapper {
