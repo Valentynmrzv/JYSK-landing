@@ -1,2 +1,0 @@
-# JYSK-landing
- 
