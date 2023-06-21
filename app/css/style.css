@@ -845,6 +845,7 @@ ul {
   }
 }
 .similar__link {
+  display: block;
   height: 100%;
 }
 .similar__link .catalog__img img {
