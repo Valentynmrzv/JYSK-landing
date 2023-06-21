@@ -46,6 +46,7 @@
         }
     }
     &__text {
+        max-width: 167px;
         font-style: normal;
         @include mobile-font-subtitle;
         cursor: default;
@@ -53,6 +54,7 @@
     
         @media screen and (min-width: 1440px) {
             @include font-subtitle;
+
         }
     }
 }

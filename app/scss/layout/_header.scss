@@ -15,6 +15,12 @@
     &__button {
         background-color: transparent;
         border: none;
+        cursor: pointer;
+        
+        transition: var(--transition-property);
+        &:hover {
+            opacity: 0.6;
+        }
     }
 
     &__icon {
