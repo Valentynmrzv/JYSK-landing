@@ -28,6 +28,7 @@
     "swiper": "latest"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "gulp-clean": "latest"
   }
 }
